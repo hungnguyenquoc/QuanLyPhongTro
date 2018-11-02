@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="padding:0;">
+    <header id="header" class="py-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-7 text-md-left header-left pt-1">
+                    <i class="fa fa-phone"></i>
+                    <span class="mr-2">01668836079</span>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>renthouse s@gmail.com</span>
+                </div>
+                <div class="col-md-5 text-center text-md-right header-right text-right mt-2 mt-md-0">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-twitch"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container">
+            <a href="" class="navbar-brand navbar-brand--logo text-center">
+                <img src="~/Content/img/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myMenu">
+                <ul class="navbar-nav navbar-nav--menu ml-auto">
+                    <li class="nav-item active">
+                        <a href="" class="nav-link active">TRANG CHỦ</a>
+                        <div class="nav-item__line"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">PHÒNG CHO THUÊ</a>
+                        <div class="nav-item__line"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">TÌM NGƯỜI Ở GHÉP</a>
+                        <div class="nav-item__line"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#myModal" href="javascript:void(0)"
+                           onclick="openLoginModal();">ĐĂNG NHẬP</a>
+                        <div class="nav-item__line"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

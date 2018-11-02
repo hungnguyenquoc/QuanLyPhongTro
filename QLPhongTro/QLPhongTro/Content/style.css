@@ -1,0 +1,267 @@
+﻿body {
+}
+
+
+/* BEGIN HEADER */
+#header {
+    background-color: black;
+    color: white;
+}
+
+.header-left i {
+    margin-right: 4px;
+}
+
+.header-right i {
+    font-size: 14px;
+    padding: 8px 10px;
+    background-color: #333333;
+    margin-left: 2px;
+    border: 1px solid transparent;
+    transition: all 0.5s;
+}
+
+    .header-right i:hover {
+        background-color: black;
+        border: 1px solid white;
+    }
+/* END HEADER */
+/* BEGIN NAVBAR */
+.navbar-expand-md {
+    background-color: #00a261;
+    padding: 0px;
+}
+
+.navbar-nav--menu {
+    margin-top: -10px
+}
+
+    .navbar-nav--menu .nav-item .nav-link {
+        font-weight: bold;
+        color: whitesmoke;
+        transition: all 0.5s;
+    }
+
+.nav-item__line {
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.5s;
+}
+
+.navbar-nav--menu .nav-item:hover > .nav-link {
+    color: black;
+}
+
+.navbar-nav--menu .nav-item:hover > .nav-item__line {
+    width: 100%;
+}
+
+.navbar-nav--menu .nav-item {
+    margin-left: 20px;
+}
+
+.navbar-light .navbar-nav--menu .active .nav-link {
+    color: black;
+}
+
+.navbar-nav--menu .active .nav-item__line {
+    width: 100%;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
+
+/* END NAVBAR */
+/* BEGIN CAROUSEL */
+.slider-caption {
+    position: absolute;
+    bottom: 35%;
+    width: 80%;
+    text-align: center;
+    left: 10%;
+}
+
+    .slider-caption h1 {
+        font-size: 3em;
+        line-height: 1.4em;
+        font-weight: 300;
+    }
+
+@media (max-width: 996px) {
+    .slider-caption h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-caption h1 {
+        font-size: 1.875em;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider-caption h1 {
+        font-size: 1.25em;
+    }
+}
+
+.slider-caption h1 {
+    color: white;
+    font-weight: bold;
+}
+
+.slider-caption i {
+    color: #b06010;
+    margin-right: 20px;
+    font-size: 1.2em;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+    .slider-caption i:hover {
+        -webkit-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+
+@media (max-width: 576px) {
+    .slider-caption i {
+        font-size: 0.8em;
+    }
+}
+
+.carousel-indicators--config {
+    bottom: 18%;
+}
+
+@media (max-width: 576px) {
+    .carousel-indicators--config {
+        bottom: 0px;
+    }
+}
+
+.carousel-indicators--config li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #b06010;
+}
+
+.carousel-item img {
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+}
+
+.carousel--config a {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.carousel--config:hover > a {
+    opacity: 1;
+}
+/* SECTION SEARCH */
+.hostel_search {
+    border: 0;
+    box-shadow: 0 0 0 0;
+}
+
+.hostel_search_wrapper {
+    margin-bottom: 0;
+}
+
+.hostel_search_wrapper_one {
+    width: 23%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+    .hostel_search_wrapper_one select, button {
+        width: calc(100% - 40px);
+        padding: 3%;
+        border-radius: .25rem;
+        color: #555555;
+        font-size: 17px;
+        /* background-color: #ffffff; */
+        font-weight: bold;
+    }
+
+    .hostel_search_wrapper_one option {
+        font-weight: bold;
+        font-size: 17px;
+        color: #0e0f0f;
+    }
+
+#search button {
+    color: black;
+    font-weight: bold;
+}
+
+/* END CAROUSEL */
+/* BEGIN INTRODUCE */
+.introduce_content {
+    padding-top: 50px;
+}
+
+.title-2 {
+    font-weight: bold;
+}
+
+.content_detail {
+    font-size: 18px;
+}
+
+.introduce__cover-content h4 {
+    color: #00A261;
+    font-weight: bold;
+}
+/* END INTRODUCE */
+/* THE MODAL */
+.modal-header .close {
+    padding: 1rem;
+    margin: -1rem -9rem -1rem auto
+}
+
+.modal-content {
+    background-color: #404d5b;
+    text-align: center;
+}
+
+.modal-title {
+    margin-left: 41px;
+    color: white;
+    font-weight: bold;
+}
+
+.btnDangNhap {
+    background-color: #00A261;
+    width: 75%;
+    color: black;
+    font-weight: bold;
+    margin-top: 14px;
+    margin-bottom: 16px
+}
+
+    .btnDangNhap:hover {
+        color: white;
+        background-color: rgb(8, 110, 69);
+        transition: 2s;
+    }
+
+.forgot {
+    padding-right: 53px;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* END THE MODAL */
