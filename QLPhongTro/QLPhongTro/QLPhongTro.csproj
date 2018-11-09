@@ -156,6 +156,8 @@
     <Compile Include="Areas\BossHostel\BossHostelAreaRegistration.cs" />
     <Compile Include="Areas\BossHostel\Controllers\HomeController.cs" />
     <Compile Include="Areas\TVNguoiDung\Controllers\HomeController.cs" />
+    <Compile Include="Areas\TVNguoiDung\Controllers\RegisterController.cs" />
+    <Compile Include="Areas\TVNguoiDung\Models\MRegister.cs" />
     <Compile Include="Areas\TVNguoiDung\TVNguoiDungAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -168,6 +170,8 @@
     <Compile Include="Models\ChuPhongTro.cs" />
     <Compile Include="Models\DAO\login.cs" />
     <Compile Include="Models\DAO\ModifyAccount.cs" />
+    <Compile Include="Models\DAO\ModifyDatPhong.cs" />
+    <Compile Include="Models\DAO\ModifyPhong.cs" />
     <Compile Include="Models\DAO\ModifyTVNguoiDung.cs" />
     <Compile Include="Models\DAO\PhongChoThue.cs" />
     <Compile Include="Models\DAO\register.cs" />
@@ -195,6 +199,7 @@
     <Content Include="Content\img\good-room4.jpg" />
     <Content Include="Content\img\introduction.jpg" />
     <Content Include="Content\img\left1.png" />
+    <Content Include="Content\img\loading456.gif" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\rental-building.png" />
     <Content Include="Content\img\right1.png" />
@@ -223,6 +228,7 @@
     <Content Include="Areas\BossHostel\Views\web.config" />
     <Content Include="Areas\BossHostel\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\QLNguoiDung\Index.cshtml" />
+    <Content Include="Areas\TVNguoiDung\Views\Register\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -257,7 +263,6 @@
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\BossHostel\Models\" />
     <Folder Include="Areas\BossHostel\Views\Shared\" />
-    <Folder Include="Areas\TVNguoiDung\Models\" />
     <Folder Include="Areas\TVNguoiDung\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>

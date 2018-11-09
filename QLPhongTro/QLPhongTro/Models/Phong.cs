@@ -30,7 +30,8 @@ namespace QLPhongTro.Models
         [StringLength(200)]
         public string DiaChi { get; set; }
 
-        public int SoDT { get; set; }
+        [StringLength(11)]
+        public string SoDT { get; set; }
 
         public int SoNguoiO { get; set; }
 
@@ -50,7 +51,7 @@ namespace QLPhongTro.Models
         [StringLength(1000)]
         public string MoTa { get; set; }
 
-        [Required]
+        [MaxLength(1)]
         public byte[] HinhAnh { get; set; }
 
         public int idBoss { get; set; }
@@ -58,6 +59,9 @@ namespace QLPhongTro.Models
         public int idAD { get; set; }
 
         public int? idMaKV { get; set; }
+
+        [StringLength(20)]
+        public string TrangThai { get; set; }
 
         public virtual Admin Admin { get; set; }
 

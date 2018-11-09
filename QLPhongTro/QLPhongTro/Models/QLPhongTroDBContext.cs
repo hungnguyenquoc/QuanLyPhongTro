@@ -8,7 +8,7 @@ namespace QLPhongTro.Models
     public partial class QLPhongTroDBContext : DbContext
     {
         public QLPhongTroDBContext()
-            : base("name=QLPhongTroDBContext")
+            : base("name=QLPhongTroDBContext1")
         {
         }
 
@@ -50,8 +50,18 @@ namespace QLPhongTro.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Phong>()
+                .Property(e => e.SoDT)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Phong>()
                 .Property(e => e.GioiTinh)
                 .IsFixedLength();
+
+            modelBuilder.Entity<Phong>()
+                .Property(e => e.TrangThai)
+                .IsFixedLength()
+                .IsUnicode(false);
 
             modelBuilder.Entity<Phong>()
                 .HasMany(e => e.DatPhongs)

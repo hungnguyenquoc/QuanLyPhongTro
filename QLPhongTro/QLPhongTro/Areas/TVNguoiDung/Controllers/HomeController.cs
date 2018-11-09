@@ -11,6 +11,10 @@ namespace QLPhongTro.Areas.TVNguoiDung.Controllers
         // GET: TVNguoiDung/Home
         public ActionResult Index()
         {
+            if (Session["username"] == null || (string)Session["Quyen"] != "2")
+            {
+                return RedirectToAction("Index", "Login", new { @area = "" });
+            }
             return View();
         }
     }

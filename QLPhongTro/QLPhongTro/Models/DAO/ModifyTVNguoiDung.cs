@@ -7,7 +7,7 @@ namespace QLPhongTro.Models.DAO
 {
     public class ModifyTVNguoiDung
     {
-        public void InsertDB(string tenUser, string gioiTinh, string email, int soDienThoai, string diaChi,string tenTaiKhoan )
+        public void InsertDB(string tenUser, string gioiTinh, string email, int soDienThoai, string diaChi, string tenTaiKhoan)
         {
             QLPhongTroDBContext db = new QLPhongTroDBContext();
             TVNguoiDung tvNguoiDung = new TVNguoiDung();
@@ -40,6 +40,10 @@ namespace QLPhongTro.Models.DAO
             //t.SoDT = "34234234";
             //db.SaveChanges();
         }
-
+        public int GetIDByUsername(string username)
+        {
+            QLPhongTroDBContext db = new QLPhongTroDBContext();
+            return db.TVNguoiDungs.SingleOrDefault(x => x.TenTaiKhoan == username).idUser;
+        }
     }
 }

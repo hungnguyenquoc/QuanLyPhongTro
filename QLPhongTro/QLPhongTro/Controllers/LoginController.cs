@@ -18,11 +18,13 @@ namespace QLPhongTro.Controllers
         [HttpPost]
         public JsonResult Login(login model)
         {
-            //login l = new login();
-            //string s = l.VerifyLogin(model.userName, model.passWord);
-            //return Json(s, JsonRequestBehavior.AllowGet);
-
-            return Json( new login().VerifyLogin(model.userName,model.passWord), JsonRequestBehavior.AllowGet);
+            string check = new login().VerifyLogin(model.userName, model.passWord);
+            if (check != "false")
+            {
+                Session["username"] = model.userName;
+                Session["Quyen"] = check;
+            }
+            return Json(check, JsonRequestBehavior.AllowGet);
         }
     }
 }

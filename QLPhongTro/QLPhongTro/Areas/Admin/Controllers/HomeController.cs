@@ -11,6 +11,10 @@ namespace QLPhongTro.Areas.Admin.Controllers
         // GET: Admin/Home
         public ActionResult Index()
         {
+            if (Session["username"] == null || (string)Session["Quyen"] == "0")
+            {
+                return RedirectToAction("Index", "Login", new { @area = "" });
+            }
             return View();
         }
     }

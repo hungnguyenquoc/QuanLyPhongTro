@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel-group">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4> DANH SÁCH PHÒNG</h4>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID Phòng</th>
+                                    <th>Tên Phòng</th>
+                                    <th>Giá Phòng</th>
+                                    <th>Diện Tích Phòng</th>
+                                    <th>Số Điện Thoại</th>
+                                    <th>Địa Chỉ</th>
+                                    <th>Tên Khu Vực</th>
+                                    <th>Mô Tả</th>
+                                    <th>Hình Ảnh</th>
+                                    <th>ID Boss</th>
+                                    <th>ID Admin</th>
+                                    <th>ID Mã Khu Vực</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.listInfoPhong != null)
+                                {
+                                    foreach (var item in ViewBag.listInfoPhong)
+                                    {
+                                        <tr>
+                                            <td>@item.idPhong</td>
+                                            <td>@item.TenPhong</td>
+                                            <td>@item.GiaPhong</td>
+                                            <td>@item.DienTichPhong</td>
+                                            <td>@item.SoDT</td>
+                                            <td>@item.DiaChi</td>
+                                            <td>@item.TenKhuVuc</td>
+                                            <td>@item.MoTa</td>
+                                            <td>@item.HinhAnh</td>
+                                            <td>@item.idBoss</td>
+                                            <td>@item.idAD</td>
+                                            <td>@item.idMaKV</td>
+                                            <td> <a class="btn btn-success" onclick="ConfirmOffer(@item.idPhong)">Đặt Phòng </a></td>
+                                            <td> <a class="btn btn-danger" style="display:none;" onclick="ConfirmDialog()">Hủy Phòng</a></td>
+                                        </tr>
+                                    }
+                                }
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" style="color:black;">Xác Nhận Đặt Phòng</h4>
+                            <a class="close" data-dismiss="modal">&times;</a>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Bạn Muốn Đặt Phòng Này Chứ ?</h4>
+                            <div style="text-align:center;display:none" id="loaderDiv">
+                                <img src="~/Content/img/loading456.gif" />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-default" data-dismiss="modal">Hủy</a>
+                            <a class="btn btn-success" onclick="DatPhong()">Đồng Ý</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="GetID" />
+<script>
+    var DatPhong = function () {
+        var RoomID = $("#GetID").val();
+        $.ajax({
+            type: "Post",
+            url: "/TVNguoiDung/Register/DatPhong",
+            data: { RoomID: RoomID },
+            success: function (bool) {
+                if (bool == "true") {
+                    window.location.reload(true);
+                }
+            }
+        })
+    }
+
+
+    var ConfirmOffer = function (RoomID) {
+        $("#GetID").val(RoomID);
+        $("#myModal").modal("show");
+        
+    }
+</script>
+
+
+
